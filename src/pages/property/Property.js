@@ -9,14 +9,13 @@ import Footer from '../../components/footer/footer'
 import BottomNav from '../../components/bottom_navbar/bottomNav'
 import { useLocation } from 'react-router-dom'
 import useFetch from '../../hooks/useFetch'
-import Slider from '../../components/imageSlider/Slider'
+import Propertyslider from '../../components/propertyslider/Propertyslider'
 
 export default function Property() {
     const location = useLocation()
     const id = location.pathname.split("/")[2];
 
     const { data, laoding, error } = useFetch(`/property/${id}`)
-    // const { nearbydata, nearbylaoding, nearbyerror} = useFetch('/property')
 
     return (
         <div>
@@ -27,16 +26,7 @@ export default function Property() {
             <Vr_display data={data}/>
             <Amenities />
             <Summary data={data} />
-            {/* <div className='nearby_property_container'>
-                <p className='neabyname'>Nearby Properties</p>
-                <div className='nearby_property_items'>
-                    <>
-                        {nearbydata.map((item) => (
-                            <Slider key={item._id} item={item} />
-                        ))}
-                    </>
-                </div>
-            </div> */}
+            <Propertyslider/>
             <BottomNav />
             <Footer />
         </div>

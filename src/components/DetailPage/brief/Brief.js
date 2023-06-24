@@ -16,12 +16,13 @@ export default function Brief(props) {
     contactpage.classList.add("dont-show-contact-page")
     contactpage.classList.remove("show-contact-page")
   }
+  
   return (
     <div>
       <div className='header_container'>
         <div className='header_left'>
           <p className='title'>{props.data.propertytitle}<span>.</span>${props.data.price} </p>
-          <p className='features'>{props.data.bhk} Bhk<span>.</span>{props.data.protertytype}<span>.</span>{props.data.feature}</p>
+          <p className='features'>{props.data.bhk} Bhk<span>.</span>{props.data.propertytype}<span>.</span>{props.data.feature}</p>
           <p className='location'>{props.data.location}, {props.data.country}</p>
         </div>
         <div className='header_right'>
@@ -35,7 +36,7 @@ export default function Brief(props) {
           </div>
           <div className='owner-left-detail'>
             <p className='aboutowner'>About the Owner</p>
-            <p className='ownername'>{props.data.owername}</p>
+            <p className='ownername'>{props.data.ownername}</p>
             <p className='ownerdesc'>{props.data.ownerdesc}</p>
           </div>
           <div className='owner-right-detail'>

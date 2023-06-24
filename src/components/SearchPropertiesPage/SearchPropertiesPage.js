@@ -103,13 +103,16 @@ function SearchPropertiesPage() {
       </div>
 
 
-
-      <div className='sssparentslider' id='showhiddensliderdiv'>
-        <>
-          {data.map((item) => (
-            <Slider key={item._id} item={item} />
-          ))}
-        </>
+      <div className="super-super-parent-slider">
+        <div className='sssparentslider' id='showhiddensliderdiv'>
+          <div className="super-parent-slider">
+            <>
+              {data.map((item) => (
+                <Slider key={item._id} item={item} />
+              ))}
+            </>
+          </div>
+        </div>
       </div>
       <div className='slidershowmore'>
         <div className='expandslider'>

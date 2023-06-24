@@ -7,20 +7,22 @@ import List from './pages/list/List';
 import Propertyslider from './components/propertyslider/Propertyslider';
 import AboutUs from './pages/AboutUs/AboutUs';
 import SignUpPage1 from './pages/SignUpPage1/SignUpPage1';
+import SignUp from './components/SignUpPage/SignUp';
+import ProfilePage from './components/ProfilePage/ProfilePage';
 
 function App() {
   return (
     <>
-
-
-      {/* <SignUpPage1 /> */}
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/about' element={<AboutUs />} />
           <Route path='/explorevr/:id' element={<VrPage />} />
           <Route path='/property' element={<List />} />
           <Route path='/property/:id' element={<Property />} />
-          <Route path='/propertyslider' element={<Propertyslider />} />
+          {/* <Route path='/propertyslider' element={<Propertyslider />} /> */}
+          <Route path='/profile' element={<ProfilePage/>}/>
+          <Route path='/signup' element={<SignUpPage1/>}/>
         </Routes>
       </BrowserRouter>
     </>
