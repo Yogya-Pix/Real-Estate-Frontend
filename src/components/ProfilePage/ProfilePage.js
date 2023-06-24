@@ -4,8 +4,12 @@ import profilepic from '../../assets/mech1.png'
 import lang from '../../assets/lang.png'
 import downArrow from '../../assets/downArrow.png'
 import close from '../../assets/close.png'
+import useFetch from '../../hooks/useFetch'
 
 function ProfilePage() {
+    const { data, loading, error} = useFetch('/users')
+    console.log(data)
+    
   return (
     <>
     <div className="profile-container-close-btn">

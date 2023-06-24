@@ -8,12 +8,11 @@ export default function ImageSlider ({ data }){
 
     return (
         <div className="carousel">
-            {/* <BsArrowLeftCircleFill onClick={prevSlide} className="arrow arrow-left" /> */}
             {data.map((item, idx) => {
                 return (
                     <img
-                        src={item.src}
-                        alt={item.alt}
+                        src={item}
+                        alt="img"
                         key={idx}
                         className={slide === idx ? "slide" : "slide slide-hidden"}
                     />

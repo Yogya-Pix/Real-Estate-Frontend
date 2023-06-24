@@ -2,11 +2,15 @@ import React from 'react'
 import './SignUpPage1.css'
 import { ReactComponent as Google } from '../../assets/google.svg'
 import Footer from '../../components/footer/footer'
+import Navbar from '../../components/Navbar'
 
 
 function SignUpPage1() {
     return (
         <>
+            <div className='navcontainer'>
+                <Navbar mode="black" />
+            </div>
             <div className="signup-page-main-container">
                 <h2>Sign Up</h2>
                 <div className="SignUpPage1-container">
