@@ -2,7 +2,9 @@ import React from "react";
 import GoogleMapReact from 'google-map-react';
 import { Loader } from "@googlemaps/js-api-loader"
 import './Map.css'
+// import dotenv from '../../dotenv'
 
+// dotenv.config()
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 export default function SimpleMap() {
@@ -19,7 +21,7 @@ export default function SimpleMap() {
             <div className="map-container">
                 <div style={{ height: '100vh', width: '100vw' }}>
                     <GoogleMapReact
-                        bootstrapURLKeys={{ key: "AIzaSyC27MYJJlpto2AL6s1o2kCfVE9tTzKDYV8" }}
+                        bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAP_API_KEY }}
                         defaultCenter={defaultProps.center}
                         defaultZoom={defaultProps.zoom}
                     >
