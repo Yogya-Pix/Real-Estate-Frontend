@@ -42,7 +42,11 @@ function FilterType() {
                         <ul className='filter-dropdown-list'>
                             {
                                 data.map((item) => (
-                                    <li className="filter-dropdown-list-items" key={item._id}>{item.feature}</li>
+                                    <li className="filter-dropdown-list-items" key={item._id}>
+                                        <p>
+                                            {item.feature}
+                                        </p>
+                                    </li>
                                 ))
                             }
                         </ul>

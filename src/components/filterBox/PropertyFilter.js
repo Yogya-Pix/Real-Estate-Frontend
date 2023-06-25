@@ -42,7 +42,11 @@ function PropertyFilter() {
                         <ul className='property-dropdown-list'>
                             {
                                 data.map((item) => (
-                                    <li className="property-dropdown-list-items" key={item.id}>{item.propertytype}</li>
+                                    <li className="property-dropdown-list-items" key={item.id}>
+                                        <p>
+                                            {item.propertytype}
+                                        </p>
+                                    </li>
                                 ))
                             }
                         </ul>

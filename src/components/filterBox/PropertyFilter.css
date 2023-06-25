@@ -28,7 +28,7 @@
     width: 400px;
     position: absolute;
     left: 420px;
-    height: 250px;
+    /* height: 250px; */
     border: 1px solid black;
     border-radius: 20px;
     background-color: white;
@@ -43,9 +43,13 @@
 
 .property-dropdown-list-items:hover,
 .property-dropdown-list-items:active {
-    background-color: #e6e6e6;
+    /* background-color: #e6e6e6; */
     /* border-radius: 20px; */
     color: black;
+}
+
+.property-dropdown-list-items:hover p {
+    border-bottom: 1px solid black;
 }
 
 .property-dropdown-btn-div svg {

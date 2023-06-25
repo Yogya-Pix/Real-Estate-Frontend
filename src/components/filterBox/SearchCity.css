@@ -26,7 +26,7 @@
     padding: 0px;
     list-style-type: none;
     width: 400px;
-    height: 250px;
+    /* height: 250px; */
     position: absolute;
     left: 125px;
     border: 1px solid black;
@@ -43,9 +43,13 @@
 
 .dropdown-list-items:hover,
 .dropdown-list-items:active {
-    background-color: #e6e6e6;
+    /* background-color: #e6e6e6; */
     /* border-radius: 20px; */
     color: black;
+}
+
+.dropdown-list-items:hover p {
+    border-bottom: 1px solid black;
 }
 
 .dropdown-btn-div svg {
