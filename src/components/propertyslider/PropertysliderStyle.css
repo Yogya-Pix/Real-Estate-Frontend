@@ -8,6 +8,8 @@
 .nearby_property_div {
     display: flex;
     flex-direction: column;
+    height: 494px;
+    overflow: hidden;
 }
 
 .nearby_property_items {

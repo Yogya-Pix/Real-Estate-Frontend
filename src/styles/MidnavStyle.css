@@ -40,3 +40,8 @@
     border: 4px solid black;
     margin-top: 50px;
 }
+
+.midnavslider{
+    overflow: hidden;
+    max-height: 411px;
+}

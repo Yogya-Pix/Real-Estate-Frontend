@@ -110,7 +110,7 @@
     z-index: 1;
 }
 
-.vr svg {
+.vrsvg {
     position: absolute;
     bottom: -100px;
     right: 222px;
@@ -230,11 +230,11 @@
     right: 544px;
 }
 
-.vr svg:hover {
+.around_icons:hover .vrsvg{
     transform: rotate(-8deg);
 }
 
-.vr:hover .hopin {
+.around_icons:hover .hopin {
     transform: scale(1, 1);
     opacity: 1;
 }

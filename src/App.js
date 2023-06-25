@@ -9,6 +9,7 @@ import AboutUs from './pages/AboutUs/AboutUs';
 import SignUpPage1 from './pages/SignUpPage1/SignUpPage1';
 import SignUp from './components/SignUpPage/SignUp';
 import ProfilePage from './components/ProfilePage/ProfilePage';
+import Searchbar from './components/filterBox/Searchbar';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           {/* <Route path='/propertyslider' element={<Propertyslider />} /> */}
           <Route path='/profile' element={<ProfilePage/>}/>
           <Route path='/signup' element={<SignUpPage1/>}/>
+          <Route path='/searchbar/:key' element={<Searchbar/>}/>
         </Routes>
       </BrowserRouter>
     </>

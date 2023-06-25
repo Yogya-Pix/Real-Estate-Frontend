@@ -26,9 +26,7 @@ function FilterType() {
     const [city, setCity] = useState();
 
 
-    const { data, loading, error } = useFetch(`/property?country=Italy}`)
-
-    console.log(data)
+    const { data, loading, error } = useFetch(`/property`)
 
     return (
         <>
