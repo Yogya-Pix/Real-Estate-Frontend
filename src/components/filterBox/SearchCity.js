@@ -41,7 +41,10 @@ function SearchCity() {
             <ul className='dropdown-list'>
               {
                 data.map((item) => (
-                  <li className="dropdown-list-items" key={item._id}>{item.location}</li>
+                  <li className="dropdown-list-items" key={item._id}>
+                    <p>
+                      {item.location}
+                    </p></li>
                 ))
               }
             </ul>

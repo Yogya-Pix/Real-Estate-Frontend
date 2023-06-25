@@ -72,18 +72,20 @@ function SearchPropertiesPage() {
             </div>
           </div>
           <Link to={`/searchbar/${searchvalue}`} style={{ color: "black" }}>
-          <div className="filter-search-btn-container">
-            <Search />
-            <p>Search</p>
-          </div>
+            <div className="filter-search-btn-container">
+              <Search />
+              <p>Search</p>
+            </div>
           </Link>
         </div>
         <div className="show-on-map-btn">
-          <div className='btm__nav'>
-            <div className='btm__nav-btn'>
-              <Mapicon />
-              Show on Map</div>
-          </div>
+          <Link to='/Map'>
+            <div className='btm__nav'>
+              <div className='btm__nav-btn'>
+                <Mapicon />
+                Show on Map</div>
+            </div>
+          </Link>
         </div>
       </div>
 

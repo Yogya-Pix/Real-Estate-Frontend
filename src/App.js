@@ -10,6 +10,7 @@ import SignUpPage1 from './pages/SignUpPage1/SignUpPage1';
 import SignUp from './components/SignUpPage/SignUp';
 import ProfilePage from './components/ProfilePage/ProfilePage';
 import Searchbar from './components/filterBox/Searchbar';
+import Map from '../src/components/MapIntegration/Map'
 
 function App() {
   return (
@@ -22,9 +23,11 @@ function App() {
           <Route path='/property' element={<List />} />
           <Route path='/property/:id' element={<Property />} />
           {/* <Route path='/propertyslider' element={<Propertyslider />} /> */}
-          <Route path='/profile' element={<ProfilePage/>}/>
-          <Route path='/signup' element={<SignUpPage1/>}/>
-          <Route path='/searchbar/:key' element={<Searchbar/>}/>
+          <Route path='/profile' element={<ProfilePage />} />
+          <Route path='/signup' element={<SignUpPage1 />} />
+          <Route path='/searchbar/:key' element={<Searchbar />} />
+          <Route path='/Map' element={<Map />} />
+          <Route path='/AboutUs' element={<AboutUs />} />
         </Routes>
       </BrowserRouter>
     </>
