@@ -45,6 +45,7 @@
   },
   "proxy": "https://real-estate-backend-wihx.onrender.com/api",
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@types/jquery": "^3.5.16"
   }
 }
