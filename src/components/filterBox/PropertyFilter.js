@@ -24,9 +24,7 @@ function PropertyFilter() {
     const [city, setCity] = useState();
 
 
-    const { data, loading, error } = useFetch(`/property?country=Italy}`)
-
-    console.log(data)
+    const { data, loading, error } = useFetch(`/property`)
 
     const Menu = ['a', 'b', 'c', 'd'];
 
@@ -44,7 +42,7 @@ function PropertyFilter() {
                         <ul className='property-dropdown-list'>
                             {
                                 data.map((item) => (
-                                    <li className="property-dropdown-list-items" key={item.id}>{item.protertytype}</li>
+                                    <li className="property-dropdown-list-items" key={item.id}>{item.propertytype}</li>
                                 ))
                             }
                         </ul>

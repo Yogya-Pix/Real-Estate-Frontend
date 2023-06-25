@@ -16,7 +16,7 @@
 
 .sssparentslider{
     overflow: hidden;
-    height: 826px;
+    max-height: 818px;
 }
 
 .super-parent-slider{
@@ -34,7 +34,7 @@
     box-shadow: 2.78659px 2.78659px 8.35976px 2.78659px rgba(0, 0, 0, 0.05);
     width: 453px;
     margin: .3rem;
-    height: 380px;
+    /* height: 380px; */
     border-radius: 16px;
     transition: all .4s;
 }
@@ -183,11 +183,36 @@
 
 
 .parent-slider-content-information svg {
-    margin: 15px;
-    margin-left: 25px;
     width: 18px;
 }
 
-.parent-slider-content-information svg:hover {
+.likebtn:hover {
     color: red;
+}
+
+.likeicons{
+    display: flex;
+}
+
+.likebtn{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 25px;
+    width: 21px;
+    height: 20px;
+}
+
+.unlikebtn{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 25px;
+    border: white;
+}
+
+.showlikebtn {
+    display: flex;
+}
+
+.dontshowlikebtn {
+    display: none;
 }

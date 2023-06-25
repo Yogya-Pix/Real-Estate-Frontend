@@ -7,7 +7,6 @@ import { ReactComponent as DownArrow } from '../../assets/DownArrow.svg'
 function SearchCity() {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-
   const ref = useRef()
 
   useEffect(() => {
@@ -25,9 +24,7 @@ function SearchCity() {
   const [city, setCity] = useState();
 
 
-  const { data, loading, error } = useFetch(`/property?country=Italy}`)
-
-  console.log(data)
+  const { data, loading, error } = useFetch(`/property`)
 
   return (
     <>
@@ -44,7 +41,7 @@ function SearchCity() {
             <ul className='dropdown-list'>
               {
                 data.map((item) => (
-                  <li className="dropdown-list-items" key={item.id}>{item.location}</li>
+                  <li className="dropdown-list-items" key={item._id}>{item.location}</li>
                 ))
               }
             </ul>

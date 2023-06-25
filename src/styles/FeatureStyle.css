@@ -62,63 +62,63 @@
     transition: 0.4s;
 }
 
-.ftop:hover .name{
+.ftop:hover .name {
     opacity: 1;
 }
 
-.ftop:hover .desc{
+.ftop:hover .desc {
     margin-top: 0;
 }
 
 .ar_svg1,
 .vr,
 .port_big_box,
-.port_small_box{
+.port_small_box {
     transition: 0.4s;
 }
 
 .extrareal,
 .ai,
-.stayahead{
+.stayahead {
     transition: 0.4s;
 }
 
-.ftop:hover .ar_svg1{
+.ftop:hover .ar_svg1 {
     transform: rotate(-37.89deg);
 }
 
-.ftop:hover .vr{
+.ftop:hover .vr {
     transform: rotate(25.28deg);
 }
 
-.ftop:hover .port_big_box{
+.ftop:hover .port_big_box {
     transform: rotate(-40deg);
 }
 
-.ftop:hover .port_small_box{
+.ftop:hover .port_small_box {
     transform: rotate(75deg);
 }
 
-.fbottom:hover .name{
+.fbottom:hover .name {
     opacity: 1;
 }
 
-.fbottom:hover .desc{
+.fbottom:hover .desc {
     margin-top: 0;
 }
 
-.fbottom:hover{
+.fbottom:hover {
     margin-top: 0;
 }
 
-.fbottom:hover .extrareal{
+.fbottom:hover .extrareal {
     transform: rotate(-15.19deg);
 }
 
-.fbottom:hover .ai{
+.fbottom:hover .ai {
     transform: rotate(-19.04deg);
 }
 
-.fbottom:hover .stayahead{
+.fbottom:hover .stayahead {
     transform: rotate(-11.08deg);
 }

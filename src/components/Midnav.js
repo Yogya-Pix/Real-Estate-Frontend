@@ -2,16 +2,13 @@
 import React, { useState } from 'react'
 import '../styles/MidnavStyle.css'
 import useFetch from "../hooks/useFetch"
+import Slider from './imageSlider/Slider'
 
 export default function Midnav() {
 
-    // const { data , loading, error } = useFetch("/property")
-    // console.log(data)
+    const [value, setvalue] = useState("London");
 
-    // const [ destination, setDestination ] = useState(["Manchaster", "Bristol", "Nottingham", "Birmingham", "Brisbane", "Cairns", "Darwin", "London"]);
-    const [value, setvalue] = useState();
-    // const { data, loading, error } = useFetch()
-    // console.log(data)
+    const { data , loading, error } = useFetch(`/property?location=${value}`)
 
     return (
         <div>
@@ -27,22 +24,17 @@ export default function Midnav() {
                     <p onClick={() => setvalue("London")}>London</p>
                 </div>
             </div>
-            {/* <div className='allitemscontainer'>
-                <>
-                    {data.map((item) => (
-                        
-                        <div className='itemdetails' key={item._id}>
-                            <p>{item.country}</p>
-                            <p>{item.location}</p>
-                            <p>{item.owername}</p>
-                            <p>{item.bhk}</p>
-                            <p>{item.protertytype}</p>
-                            <p>{item.feature}</p>
-                            <p>₹.{item.price}</p>
-                        </div>
-                    ))}
-                </>
-            </div> */}
+            <div className="search_result_items">
+                <div className='midnavslider' id='showhiddensliderdiv'>
+                    <div className="super-parent-slider">
+                        <>
+                            {data.map((item) => (
+                                <Slider key={item._id} item={item} />
+                            ))}
+                        </>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

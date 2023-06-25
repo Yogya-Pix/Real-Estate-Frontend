@@ -3,9 +3,11 @@ import navbg_image from '../../images/bgimage.png'
 import Navbar from '../../components/Navbar';
 import Display1 from '../../components/Display1';
 import Features from '../../components/Features';
+import Midnav from '../../components/Midnav';
 import Footer from '../../components/footer/footer';
 import FeaturesDiv from '../../components/featuresComponent/FeaturesDiv';
 import Body from '../../components/body/body';
+import HomeSlider from '../../components/HomeSlider'
 
 function App() {
     return (
@@ -18,6 +20,7 @@ function App() {
             </div>
             <Display1 />
             <Features />
+            <Midnav/>
             <Body />
         </>
     );

@@ -11,21 +11,22 @@ import axios from 'axios'
 
 function Slider(props) {
 
-  const hanldelike = async (id) => {
-    const liked = {
-      isliked: true,
-    };
+  // const hanldelike = async (id) => {
+  //   const liked = {
+  //     isliked: true,
+  //   };
 
-    await axios.put(`/property/${id}`, liked)
-  }
+  //   await axios.put(`/property/${id}`, liked)
 
-  const hanldeunlike = async (id) => {
-    const unliked = {
-      isliked: false,
-    };
+  // }
 
-    await axios.put(`/property/${id}`, unliked)
-  }
+  // const hanldeunlike = async (id) => {
+  //   const unliked = {
+  //     isliked: false,
+  //   };
+
+  //   await axios.put(`/property/${id}`, unliked)
+  // }
 
   const top = () => {
     window.scrollTo(0, 0)
@@ -34,29 +35,35 @@ function Slider(props) {
 
   return (
     <>
-      <Link to={`/property/${props.item._id}`} style={{ color: "black" }} onClick={top}>
-        <div className="parent-slider">
-          <div className="slider-content">
-            <div className="slider-image">
+      {/* <Link to={`/property/${props.item._id}`} style={{ color: "black" }} onClick={top}> */}
+      <div className="parent-slider">
+        <div className="slider-content">
+          <div className="slider-image">
+            <Link to={`/property/${props.item._id}`} style={{ color: "black" }} onClick={top}>
               <div className='slider-image-bgimg'>
                 <ImageSlider data={props.item.picture} />
               </div>
-              <div className='slider-image-vrimages'>
+            </Link>
+
+            <div className='slider-image-vrimages'>
+              <Link to={`/property/${props.item._id}`} style={{ color: "black" }} onClick={top}>
                 <div className="vrimages">
                   <h4>VR</h4>
                   <VRimg />
                 </div>
-                <div className="vrimages">
-                  <h4>AR</h4>
-                  <ARimg />
-                </div>
-                <div className="vrimages">
-                  <h4>M</h4>
-                  <Mimg />
-                </div>
+              </Link>
+              <div className="vrimages">
+                <h4>AR</h4>
+                <ARimg />
+              </div>
+              <div className="vrimages">
+                <h4>M</h4>
+                <Mimg />
               </div>
             </div>
-            <div className="parent-slider-content-information">
+          </div>
+          <div className="parent-slider-content-information">
+            <Link to={`/property/${props.item._id}`} style={{ color: "black" }} onClick={top}>
               <div className="slider-content-information">
                 <h4>{props.item.location}, {props.item.country}</h4>
                 <p id='owner-para'>{props.item.ownername} . {props.item.ownerprofession}</p>
@@ -69,12 +76,16 @@ function Slider(props) {
                 </div>
                 <h3>$ {props.item.price}</h3>
               </div>
-              <FavIcon onClick={() => hanldelike(props.item._id)} />
-              {/* <FavIcon style={{color:"red"}} id='haljdfl' onClick={() => hanldeunlike(props.item._id)}/> */}
+            </Link>
+
+            <div className='likeicons'>
+              <FavIcon className='likebtn showlikebtn' id='likebtnshow' />
+              {/* <FavIcon className='uhlikebtn showlikebtn' style={{ color: "red" }} id='unlikebtnshow' onClick={() => hanldeunlike(props.item._id)} /> */}
             </div>
           </div>
         </div>
-      </Link>
+      </div>
+      {/* </Link> */}
     </>
   )
 }

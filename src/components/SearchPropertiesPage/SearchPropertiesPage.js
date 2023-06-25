@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Footer from '../footer/footer'
 import BottomNav from '../bottom_navbar/bottomNav'
 import Slider from '../imageSlider/Slider'
@@ -13,9 +13,14 @@ import { ReactComponent as Cross } from '../../assets/cross.svg'
 import { ReactComponent as Filter } from '../../assets/filter.svg'
 import useFetch from '../../hooks/useFetch'
 import $ from 'jquery'
+import Searchbar from '../filterBox/Searchbar'
+import { Link } from 'react-router-dom'
+import HomeSlider from '../HomeSlider'
 
 function SearchPropertiesPage() {
 
+  const [searchvalue, setsearchvalue] = useState()
+  const [changevalue, setchangevalue] = useState()
   const { data, loading, error } = useFetch("/property")
 
   $(".showmoreslider").on('click', function () {
@@ -48,6 +53,10 @@ function SearchPropertiesPage() {
     value2.classList.remove("showmoresliderbtn")
   }
 
+  const updatesearchvalue = (event) => {
+    setsearchvalue(event.target.value);
+  }
+
   return (
     <>
       <div className="parent-main-filterbox-container">
@@ -59,13 +68,15 @@ function SearchPropertiesPage() {
               <FilterType />
             </div>
             <div className="filter-property-search-bar">
-              <input type="text" placeholder='Search for “Residential House in Nantes, France”' />
+              <input type="text" placeholder='Search for “Residential House in Nantes, France”' value={searchvalue} onChange={updatesearchvalue} />
             </div>
           </div>
+          <Link to={`/searchbar/${searchvalue}`} style={{ color: "black" }}>
           <div className="filter-search-btn-container">
             <Search />
             <p>Search</p>
           </div>
+          </Link>
         </div>
         <div className="show-on-map-btn">
           <div className='btm__nav'>
@@ -80,7 +91,7 @@ function SearchPropertiesPage() {
       <div className="search-results-container-main">
         <div className="search-results-filters-shown">
           <h1>Search Results </h1>
-          <div className="selected-filters">
+          {/* <div className="selected-filters">
             <div className="filter">Residential Property
               <Cross />
             </div>
@@ -93,7 +104,7 @@ function SearchPropertiesPage() {
             <div className="filter">Italy
               <Cross />
             </div>
-          </div>
+          </div> */}
 
 
         </div>
@@ -114,6 +125,7 @@ function SearchPropertiesPage() {
           </div>
         </div>
       </div>
+      {/* <HomeSlider/> */}
       <div className='slidershowmore'>
         <div className='expandslider'>
           <p className="showmoreslider showmoresliderbtn" onClick={hidebtn1} id='showmorebtn1'>Show More...</p>
